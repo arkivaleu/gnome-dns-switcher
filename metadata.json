@@ -4,5 +4,9 @@
   "uuid": "vadym.pakhomov@arkival.eu",
   "shell-version": ["45", "46", "47", "48", "49"],
   "version": 1.01,
-  "metadata-version": 2
+  "metadata-version": 2,
+  "url": "https://github.com/ubuntu/gnome-shell-extension-appindicator"
+
 }
+
+
