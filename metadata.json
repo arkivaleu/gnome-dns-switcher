@@ -1,0 +1,8 @@
+{
+  "uuid": "dns-switcher@vadym",
+  "name": "DNS Switcher",
+  "description": "Quickly switch DNS servers via NetworkManager",
+  "shell-version": ["49"],
+  "version": 1.01,
+  "metadata-version": 2
+}

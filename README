@@ -1,0 +1,45 @@
+---DNS Switcher for GNOME Shell---
+A lightweight GNOME Shell extension to quickly switch between DNS profiles.
+
+---Motivation---
+I built this because I needed a GUI-based DNS switcher to manage my homelab environment. Manually running nmcli commands or digging into system settings every time I wanted to switch between my local lab DNS and public providers was inefficient, so I created this extension to streamline the process.
+
+---File Structure---
+extension.js: The core logic of the extension. it handles the creation of the panel icon, the popup menu, and the execution of the background nmcli commands to modify your active network connections.
+
+prefs.js: The configuration module. It provides a GTK4/Libadwaita interface (accessible via the GNOME Extensions app) where you can edit your DNS profiles and view developer information.
+
+profiles.json: The data store for your DNS configurations. It is stored in ~/.config/dns-switcher/.
+
+---Installation---
+
+Move the extension folder to ~/.local/share/gnome-shell/extensions/dns-switcher@vadym.pakhomov.arkival.eu.
+
+Ensure you have the LICENSE file and all .js files in that directory.
+
+Restart GNOME Shell (Alt+F2, then r on X11, or log out/in on Wayland).
+
+Enable the extension using the Extensions app.
+
+---Configuration---
+The extension expects a JSON format in the preferences window:
+
+JSON
+{
+  "Homelab": ["10.0.0.10", "10.0.0.11"],
+  "Cloudflare": ["1.1.1.1", "1.0.0.1"],
+  "Google": ["8.8.8.8"]
+}
+
+
+---Dependencies---
+
+NetworkManager: Uses nmcli for applying settings.
+
+GNOME Shell: Version 45 or higher (ESM support required).
+
+---License---
+Distributed under the GNU General Public License v3. See LICENSE for more information.
+
+---Author---
+Vadym Pakhomov vadym.pakhomov@arkival.eu
